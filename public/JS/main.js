@@ -1,3 +1,6 @@
+console.log("Saludos amiguitos, esta tarea fue diseñada pa correrse con el html, los amo <3 bai")
+
+
 function menu(){
     var a = prompt("Ingrese su opcion del menu");
     switch(a){
@@ -13,12 +16,14 @@ function menu(){
         case "4":
             binario();
             break;
-        case 5:
+        case "5":
+            circunferencia();
             break;
-        case 6:
+        case "6":
             absolut();
             break;
-        case 7:
+        case "7":
+            bisiesto();
             break;
     }
 }
@@ -110,11 +115,48 @@ function binario(){
     document.open();
     document.write(aux);
     document.writeln('<input type="button" value="Refresh Page" onClick="window.location.reload()">')
-        document.close();
+    document.close();
 }
 
 
 function absolut(){
     var a=prompt("ingrese valor para sacar su valor absoluto");
     var aux= Math.abs(parseFloat(a,10));
+    document.open();
+    document.writeln(aux);
+    document.writeln('<input type="button" value="Refresh Page" onClick="window.location.reload()">')
+    document.close();
+}
+
+
+function bisiesto(){
+    var a= prompt("Ingrese año a evaluar");
+    var aux = parseInt(a,10);
+    document.open();
+
+    if((aux % 4 == 0 && aux % 100 != 0) || aux % 400 == 0){
+        document.write(a + " es un anio bisiesto");
+    }else{
+        document.write(a + " no es un anio bisiesto");
+    }
+    document.writeln('<input type="button" value="Refresh Page" onClick="window.location.reload()">')
+    
+    document.close();
+}
+
+
+function circunferencia(){
+    var a=prompt("Ingrese el radio de su circunferencia");
+    var r= parseFloat(a);
+    document.open();
+    if(a<=0){
+        document.write("<h1>NO SE EVALUAR</h1>");
+    }
+    else{
+        var aux = Math.PI*((r)**2);
+        document.write("El Radio es: "+ aux);
+    }
+    document.writeln('<input type="button" value="Refresh Page" onClick="window.location.reload()">')
+    
+    document.close();
 }
