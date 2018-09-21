@@ -16,6 +16,7 @@ function menu(){
         case 5:
             break;
         case 6:
+            absolut();
             break;
         case 7:
             break;
@@ -106,5 +107,14 @@ function callFibo(){
 function binario(){
     var a=prompt("ingrese numero entero para pasar a binario");
     var aux = parseInt(a,10).toString(2);
+    document.open();
     document.write(aux);
+    document.writeln('<input type="button" value="Refresh Page" onClick="window.location.reload()">')
+        document.close();
+}
+
+
+function absolut(){
+    var a=prompt("ingrese valor para sacar su valor absoluto");
+    var aux= Math.abs(parseFloat(a,10));
 }
