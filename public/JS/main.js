@@ -10,7 +10,8 @@ function menu(){
         case "3":
             callFibo();
             break;
-        case 4:
+        case "4":
+            binario();
             break;
         case 5:
             break;
@@ -103,5 +104,7 @@ function callFibo(){
 
 
 function binario(){
-    
+    var a=prompt("ingrese numero entero para pasar a binario");
+    var aux = parseInt(a,10).toString(2);
+    document.write(aux);
 }
