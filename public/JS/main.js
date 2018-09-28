@@ -1,5 +1,7 @@
 console.log("Saludos amiguitos, esta tarea fue diseñada pa correrse con el html, los amo <3 bai")
-
+function reloader(){
+window.location="index.html";
+}
 
 function menu(){
     var a = prompt("Ingrese su opcion del menu");
@@ -37,14 +39,14 @@ function palindromo() {
         document.open();
         document.write("<h1>Funcion de palindromo</h1>")
         document.write(a + "es una palabra palindroma");
-        document.writeln('<input type="button" value="Refresh Page" onClick="window.location.reload()">')
+        document.writeln('<input type="button" value="Refresh Page" onClick="reloader()">')
         document.close();
     }
     else{
         document.open();
         document.write("<h1>Funcion de palindromo</h1>")
         document.write(a + " no es una palabra palindroma ");
-        document.writeln('<br><input type="button" value="Refresh Page" onClick="window.location.reload()">')
+        document.writeln('<br><input type="button" value="Refresh Page" onClick="reloader()">')
         document.close();
     }
     
@@ -76,7 +78,7 @@ function ordenarArreglo(){
     for (let i=0; i<arreglo.length;i++){
         document.write(arreglo[i]+" ");
     }
-    document.writeln('<input type="button" value="Refresh Page" onClick="window.location.reload()">')
+    document.writeln('<input type="button" value="Refresh Page" onClick="reloader()">')
         document.close();
 }
 
@@ -104,7 +106,7 @@ function callFibo(){
     for (let i=0; i<fibonacci.length;i++){
         document.write(fibonacci[i]+", ");
     }
-    document.writeln('<input type="button" value="Refresh Page" onClick="window.location.reload()">')
+    document.writeln('<input type="button" value="Refresh Page" onClick="reloader()">')
         document.close();
 }
 
@@ -114,7 +116,7 @@ function binario(){
     var aux = parseInt(a,10).toString(2);
     document.open();
     document.write(aux);
-    document.writeln('<input type="button" value="Refresh Page" onClick="window.location.reload()">')
+    document.writeln('<input type="button" value="Refresh Page" onClick="reloader()">')
     document.close();
 }
 
@@ -124,7 +126,7 @@ function absolut(){
     var aux= Math.abs(parseFloat(a,10));
     document.open();
     document.writeln(aux);
-    document.writeln('<input type="button" value="Refresh Page" onClick="window.location.reload()">')
+    document.writeln('<input type="button" value="Refresh Page" onClick="reloader()">')
     document.close();
 }
 
@@ -139,7 +141,7 @@ function bisiesto(){
     }else{
         document.write(a + " no es un anio bisiesto");
     }
-    document.writeln('<input type="button" value="Refresh Page" onClick="window.location.reload()">')
+    document.writeln('<input type="button" value="Refresh Page" onClick="reloader()">')
     
     document.close();
 }
@@ -156,7 +158,7 @@ function circunferencia(){
         var aux = Math.PI*((r)**2);
         document.write("El Radio es: "+ aux);
     }
-    document.writeln('<input type="button" value="Refresh Page" onClick="window.location.reload()">')
+    document.writeln('<input type="button" value="Refresh Page" onClick="reloader()">')
     
     document.close();
 }
